@@ -15,7 +15,7 @@ const questions = [
       answer: "270k"
     },
     {
-      question: "Quanto dista Tirana da Bari?",
+      question: "Quale artista è nato a Vienna?",
       options: ["Mozart", "Hegel", "Gaudì", "Enzo Fiore"],
       answer: "Mozart"
     },
@@ -102,10 +102,20 @@ const questions = [
     const percentage = (score / questions.length) * 100;
     feedbackElement.textContent = 'Hai ottenuto ' + score + ' su ' + questions.length + ' (' + percentage + '%)';
     if (percentage >= 50) {
-      videoContainer.style.display = 'block';
+      videoContainer.style.display = 'block'; // Mostra il video se il punteggio è maggiore o uguale al 50%
     }
-  }
+}
 
+document.getElementById('start-video-btn').addEventListener('click', function() {
+  var videoContainer = document.getElementById('video-container');
+  var video = document.getElementById('videoPlayer');
+  
+  // Mostra il container del video
+  videoContainer.style.display = 'block';
+  
+  // Avvia la riproduzione del video
+  video.play();
+});
 
   function displayFinalPage() {
     document.getElementById('quiz-container').style.display = 'none';
@@ -130,10 +140,7 @@ const questions = [
     }
   });
   
-  document.getElementById('show-video-btn').addEventListener('click', () => {
-    videoContainer.style.display = 'block';
-    document.getElementById('final-page').style.display = 'none';
-  });
+
   
   
   submitButton.addEventListener('click', () => {
@@ -146,4 +153,3 @@ const questions = [
     document.getElementById('quiz-container').style.display = 'block';
     displayQuestion(); // Avvia il quiz mostrando la prima domanda
   });
-  
