@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="start-page">
+    <h1>Benvenuto al Quiz!</h1>
+    <p>Clicca su "Inizia" per cominciare.</p>
+    <button id="start-btn">Inizia</button>
+  </div>
+<div id="quiz-container" style="display: none;">
+  <h1>Quiz a Scelta Multipla</h1>
+  <div id="question-container">
+    <p id="question">Domanda</p>
+    <div id="options-container">
+      <button class="option-btn">Opzione 1</button>
+      <button class="option-btn">Opzione 2</button>
+      <button class="option-btn">Opzione 3</button>
+      <button class="option-btn">Opzione 4</button>
+    </div>
+  </div>
+  <div id="feedback-container">
+    <p id="feedback"></p>
+  </div>
+  <button id="submit-btn">Submit</button>
+</div>
+<div id="final-page" style="display: none;">
+  <h1>Questa quiz è già finito!</h1>
+  <p>Ma non tenere, è in arrivo il finale.</p>
+  <button id="show-video-btn">Guarda il video</button>
+</div>
+
+<div id="video-container" style="display: none;">
+  <iframe width="560" height="315" src="https://youtu.be/qhZkxep41Io" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+<div id="confetti"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
