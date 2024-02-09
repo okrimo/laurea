@@ -189,3 +189,9 @@ body {
   #start-btn:hover {
     background-color: #005f79;
   }
+  
+
+  #videoPlayer {
+    width: 100%;
+    height: auto;
+}
