@@ -31,12 +31,33 @@
 <div id="final-page" style="display: none;">
   <h1>Questa quiz è già finito!</h1>
   <p>Ma non tenere, è in arrivo il finale.</p>
-  <button id="show-video-btn">Guarda il video</button>
+  <button id="start-video-btn">Avvia il video</button>
 </div>
 
 <div id="video-container" style="display: none;">
-  <source src="./video.mp4" type="video/mp4">
+  <video controls id="videoPlayer">
+    <source src="./test.mp4" type="video/mp4">
+    Il tuo browser non supporta la riproduzione di video.
+  </video>
 </div>
+
+
+<script>
+  document.getElementById('start-video-btn').addEventListener('click', function() {
+    // Nascondi tutti gli altri elementi della pagina
+    document.getElementById('start-page').style.display = 'none';
+    document.getElementById('quiz-container').style.display = 'none';
+    document.getElementById('final-page').style.display = 'none';
+    
+    // Mostra il container del video
+    document.getElementById('video-container').style.display = 'block';
+    
+    // Avvia la riproduzione del video
+    var video = document.getElementById('videoPlayer');
+    video.play();
+  });
+  </script>
+
 
 
 <div id="confetti"></div>
