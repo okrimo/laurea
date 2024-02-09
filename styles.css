@@ -142,7 +142,7 @@ body {
     margin-bottom: 20px;
   }
   
-  #show-video-btn {
+  #start-video-btn {
     padding: 10px 20px;
     background-color: #008CBA;
     color: white;
@@ -152,7 +152,7 @@ body {
     transition: background-color 0.3s ease;
   }
   
-  #show-video-btn:hover {
+  #start-video-btn:hover {
     background-color: #005f79;
   }
   
@@ -189,4 +189,3 @@ body {
   #start-btn:hover {
     background-color: #005f79;
   }
-  
