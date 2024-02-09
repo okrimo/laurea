@@ -98,13 +98,7 @@ const questions = [
   }
   
   
-  function showResult() {
-    const percentage = (score / questions.length) * 100;
-    feedbackElement.textContent = 'Hai ottenuto ' + score + ' su ' + questions.length + ' (' + percentage + '%)';
-    if (percentage >= 50) {
-      videoContainer.style.display = 'block'; // Mostra il video se il punteggio è maggiore o uguale al 50%
-    }
-}
+
 
 document.getElementById('start-video-btn').addEventListener('click', function() {
   var videoContainer = document.getElementById('video-container');
@@ -125,12 +119,23 @@ document.getElementById('start-video-btn').addEventListener('click', function() 
   function showResult() {
     const percentage = (score / questions.length) * 100;
     feedbackElement.textContent = 'Hai ottenuto ' + score + ' su ' + questions.length + ' (' + percentage + '%)';
-    if (percentage >= 50) {
-      videoContainer.style.display = 'block';
+    if (percentage >= 50 && currentQuestion === questions.length) {
+        // Se tutte le domande sono state risposte correttamente e si è all'ultima domanda, mostra il video
+        alert("we giovane, allora sei pronto a vedere il video regalo?.");
+        alert("Sei sciuro no?");
+        alert("DOTTORE, DOTTORE, DOTTORE DEL BUCO...");
+        alert("Pronto veramente ora? 3,2,1..."); 
+        displayFinalPage();
     } else {
-      displayFinalPage(); // Se il punteggio è inferiore al 50%, mostra direttamente la pagina finale
+      alert("we giovane, anche se non sei stato bravo eh");
+      alert("Sei sciuro no?");
+      alert("DOTTORE, DOTTORE, DOTTORE DEL BUCO...");
+      alert("Pronto veramente ora? 3,2,1..."); 
+      displayFinalPage();
     }
-  }
+}
+
+
   
   submitButton.addEventListener('click', () => {
     if (currentQuestion < questions.length) {
