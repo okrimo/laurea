@@ -12,7 +12,7 @@ const questions = [
     {
       question: "Quanto dista Tirana da Bari?",
       options: ["270km", "3km più lunghi del mondo", "135km", "400km"],
-      answer: "270k"
+      answer: "270km"
     },
     {
       question: "Quale artista è nato a Vienna?",
